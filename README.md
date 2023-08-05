@@ -14,7 +14,6 @@ Estrutura construída em torno da plataforma .NET Core, que oferece uma base só
 - Testes unitários com XUnit
 - Clean Architeture
 - SOLID
-- Repository Pattern
 - CQRS
 
 ### Front-end
@@ -27,7 +26,7 @@ Estrutura desenvolvida em ReactJS, uma UI simples e minimalista, projetada exclu
 - Loading Spinners
 - Input Masks
 - Form Validators
-- Responsividade (Limitada a larguras de 520px -> 1920px seguindo os padrões de componentes BS)
+- Responsividade (Limitada a larguras de 520px até 1920px, seguindo os padrões de componentes BS)
 <br/>
 
 # Índice #
@@ -47,22 +46,22 @@ Estrutura desenvolvida em ReactJS, uma UI simples e minimalista, projetada exclu
 
 ### Sobre ###
 
-Antes de entender o funcionamento do sistema, é importante evidenciar qual foi a abordagem para construção da estrutura e o porque dessas decisões terem sido tomadas, aqui temos alguns tópicos com essas informações:
+Antes de nos aprofundarmos na operação do sistema, é fundamental destacar a abordagem adotada na construção de sua estrutura, bem como as razões subjacentes a essas decisões. Aqui estão alguns pontos cruciais que delineiam nosso processo:
 
-- O projeto Back-end do Web Crawler foi desenvolvido seguindo uma arquitetura monolítica, embora reconheça que essa abordagem possa apresentar limitações em termos de escalabilidade, optei por não adotar a arquitetura de microsserviços, utilizando de projetos externos como por exemplo workers para operações assíncronas com as filas. 
+- Arquitetura: O projeto Back-end do Web Crawler foi desenvolvido seguindo uma arquitetura monolítica, embora reconheça que essa abordagem possa apresentar limitações em termos de escalabilidade, optei por não adotar a complexidade associada aos microsserviços ou ao uso de projetos externos, como workers para operações assíncronas com filas.
 Essa decisão foi tomada por conta da demanda específica deste projeto, onde essa complexidade adicional não é necessária, por se tratar de uma prova de conceito, a ênfase recai mais sobre a simplicidade e eficácia do sistema, focando menos na demonstração de conceitos mais complexos quando não há a necessidade.
 
-- O sistema não possui conexão com um banco de dados relacional, devido aos tipos de dados que devem ser armazenados nessa abordagem, uma conexão com um banco não foi necessária para realizar o trabalho de persistência, que foi realizado com cache em memória (Redis), arquivos de texto em determinadas abordagens e com o serviço do Elastic Search. Esssa abordagem também agrega na simplicidade do uso do sistema, sendo uma dependência a menos para ser considerada.
+- Acesso a dados: Optei por não utilizar um banco de dados relacional devido aos tipos de dados que devem ser armazenados, decidi que a persistência e acesso a dados poderia ser realizado com outras abordagens como cache em memória (Redis), arquivos de texto em determinados pontos e com o serviço do Elastic Search. Essa decisão também agrega na simplicidade do uso do sistema, sendo uma dependência a menos para ser considerada.
 
-- Os testes unitários foram realizados com ênfase nos handlers e services, utilizando mocks e wrappers para as dependências externas e focando nos métodos que concentram o funcionamento da aplicação como todo. Isso garante que nossos testes sejam mais objetivos e que tenham relação apenas com o funcionamento da aplicação e não com funcionamento de bibliotecas de terceiros.
+- Testes: Os testes unitários foram realizados com ênfase nos handlers e services, utilizando mocks e wrappers para as dependências externas e focando nos métodos que concentram o funcionamento da aplicação como todo. Isso resulta em testes mais objetivos e que tenham relação apenas com o funcionamento da aplicação e não com o funcionamento de bibliotecas de terceiros.
 
-- O sistema Front-end foi trabalhado da forma mais minimalista e performática possível, por se tratar de uma prova de conceito, o foco ficou na agilidade e clareza da interface de forma com que a experiência do usuário e a qualidade do sistema fossem mantidas. Essa decisão foi tomada pelo tipo de projeto que precisamos construir e também como estratégia para ganhar tempo.
+- UI: O desenvolvimento do Front-end foi guiado pelo princípio da simplicidade e desempenho otimizado, por se tratar de uma prova de conceito, a prioridade foi pela agilidade e clareza da interface de forma com que a experiência do usuário e a qualidade do sistema fossem mantidas. Essa abordagem foi selecionada pela natureza do projeto que precisamos construir e também por estratégia para otimizar o tempo.
 
 <br/>
 
 ### Funcionamento ###
 
-O fluxo de funcionamento para o usuário da aplicação, começa a partir do Front-end, uma vez que já temos o Back-end devidamente configurado (Veja mais na seção [Preparando o ambiente](#preparando-o-ambiente)).
+O fluxo de funcionamento para o usuário da aplicação começa a partir do Front-end, uma vez que já temos o Back-end devidamente configurado (veja mais na seção [Configuração](#configuração)).
 
 Ao executar o Crawler via interface do usuário, é enviada uma requisição HTTP para a API, no processamento dessa requisição temos o seguinte fluxo:
 
@@ -75,7 +74,7 @@ Ao executar o Crawler via interface do usuário, é enviada uma requisição HTT
 7 - Incluir novos resultados no cache(Redis). <br/>
 8 - Retornar o número de registros afetados. <br/>
 
-Com isso, sempre que o Crawler é executado, é feita uma busca no back-end por novos CPF's no arquivo de dados (CPF's que ainda não estão no cache do Redis ou no index do ElasticSearch) para que seja feita a busca via WebDriving.<br/><br/>
+Com isso, sempre que o Crawler é executado, é feita uma busca no back-end por novos CPF's no arquivo de dados (CPF's que ainda não estão no cache do Redis ou no index do ElasticSearch) para que seja feita a busca via WebDriving. (Sendo assim, caso seja necessário executar o crawler para novos CPF's, basta atualizar o arquivo de dados e executar novamente) <br/><br/>
 Sabendo que o Crawler já foi executado, é possível realizar uma busca por CPF via interface do usuário, onde uma requisição HTTP é enviada para a API, que se comunica com o Elastic Search e retorna o resultado obtido via Crawler.
 
 <br/>
@@ -95,10 +94,10 @@ Sabendo que o Crawler já foi executado, é possível realizar uma busca por CPF
 ### Configuração ###
 
 * Lista de CPF's
-  * Na pasta do projeto API (caminho padrão: POC-WebCrawler\POC-WebCrawler-Main\POC-WebCrawler.Web) o arquivo de texto CustomerData.txt deve conter os CPF's a serem processados pelo Crawler, separados por quebra de linha, para que sejam buscados e persistidos. O sistema apenas enviará para a fila os CPF's desse arquivo.
+  * No diretório do projeto API (caminho padrão: POC-WebCrawler\POC-WebCrawler-Main\POC-WebCrawler.Web) o arquivo de texto CustomerData.txt deve conter os CPF's a serem processados pelo Crawler, separados por quebra de linha, para que sejam buscados e persistidos, o sistema apenas enviará para a fila os CPF's desse arquivo.
 
 * Configurações e Credenciais
-  * Na pasta do projeto API (caminho padrão: POC-WebCrawler\POC-WebCrawler-Main\POC-WebCrawler.Web) o arquivo AppSettings.json deve ter as respectivas configurações alteradas/preenchidas:
+  * No diretório do projeto API (caminho padrão: POC-WebCrawler\POC-WebCrawler-Main\POC-WebCrawler.Web) o arquivo AppSettings.json deve ter as respectivas configurações alteradas/preenchidas:
   
     ```
       WebsiteCredentials:
