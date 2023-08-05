@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC-WebCrawler.Domain", "POC-WebCrawler.Domain\POC-WebCrawler.Domain.csproj", "{40FCB76F-A22E-415C-9813-57BD352E6A13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC-WebCrawler.Application", "POC-WebCrawler.Application\POC-WebCrawler.Application.csproj", "{749B642B-C454-46B5-A80C-E593C593BA42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC-WebCrawler.UnitTesting", "POC-WebCrawler.UnitTesting\POC-WebCrawler.UnitTesting.csproj", "{2A1031AA-988C-4355-AC2D-2D29DF80BD56}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC-WebCrawler.Shared", "POC-WebCrawler.Shared\POC-WebCrawler.Shared.csproj", "{01288173-A9D0-4651-B792-A40D551C0CCB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC-WebCrawler.Infra", "POC-WebCrawler.Infra\POC-WebCrawler.Infra.csproj", "{D0233A6B-0CDA-4841-987D-7841B3200B43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POC-WebCrawler.Web", "POC-WebCrawler.Web\POC-WebCrawler.Web.csproj", "{EFB6CC65-8B3A-4B41-B975-95B60FA2855A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40FCB76F-A22E-415C-9813-57BD352E6A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FCB76F-A22E-415C-9813-57BD352E6A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FCB76F-A22E-415C-9813-57BD352E6A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FCB76F-A22E-415C-9813-57BD352E6A13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{749B642B-C454-46B5-A80C-E593C593BA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{749B642B-C454-46B5-A80C-E593C593BA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{749B642B-C454-46B5-A80C-E593C593BA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{749B642B-C454-46B5-A80C-E593C593BA42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A1031AA-988C-4355-AC2D-2D29DF80BD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1031AA-988C-4355-AC2D-2D29DF80BD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1031AA-988C-4355-AC2D-2D29DF80BD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1031AA-988C-4355-AC2D-2D29DF80BD56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01288173-A9D0-4651-B792-A40D551C0CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01288173-A9D0-4651-B792-A40D551C0CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01288173-A9D0-4651-B792-A40D551C0CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01288173-A9D0-4651-B792-A40D551C0CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0233A6B-0CDA-4841-987D-7841B3200B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0233A6B-0CDA-4841-987D-7841B3200B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0233A6B-0CDA-4841-987D-7841B3200B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0233A6B-0CDA-4841-987D-7841B3200B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB6CC65-8B3A-4B41-B975-95B60FA2855A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB6CC65-8B3A-4B41-B975-95B60FA2855A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB6CC65-8B3A-4B41-B975-95B60FA2855A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB6CC65-8B3A-4B41-B975-95B60FA2855A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C6D24DF-862E-48BC-9B26-DDE74A4E6D56}
+	EndGlobalSection
+EndGlobal

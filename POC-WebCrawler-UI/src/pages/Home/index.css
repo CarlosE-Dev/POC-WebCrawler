@@ -1,0 +1,62 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    color: #ffff;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32rem;
+    min-height: 15rem;
+}
+
+.card{
+    background: #2e343a !important;
+    border-radius: 50px !important;
+}
+
+.form-title{
+    color: #ffff;
+    margin-bottom: 2rem;
+}
+
+.form-group-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .site-desc{
+        text-align: center  ;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .site-desc{
+        text-align: center;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .site-desc{
+        text-align: center;
+    }
+}

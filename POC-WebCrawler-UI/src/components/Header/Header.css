@@ -1,0 +1,43 @@
+.navbar{
+    height: 4.5rem;
+}
+
+.navbar-brand{
+    font-size: 1.4rem;
+    margin-left: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon{
+    font-size: 1.6rem;
+    margin-right: 0.4rem;
+}
+
+.btn-crawler{
+    margin-right: 2rem;
+    min-width: 6rem;
+    background-color: #555e63 !important;
+    border-color: grey !important;
+}
+
+.children-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-label{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+}
+
+.btn-exec{
+    background-color: #555e63 !important;
+    border-color: grey !important;
+    border-radius: 10px !important;
+    margin-right: 0.5rem;
+    width: 7.8rem;
+}

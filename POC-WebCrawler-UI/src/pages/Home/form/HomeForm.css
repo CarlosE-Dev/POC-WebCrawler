@@ -1,0 +1,56 @@
+.home-form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.input-form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-form-group{
+    display: flex;
+    align-self: flex-end;
+}
+
+.form-control{
+    min-width: 25rem;
+}
+
+.btn-search{
+    min-width: 6rem;
+    background-color: #555e63 !important;
+    border-color: grey !important;
+}
+
+.error{
+    color: red;
+}
+
+.response-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.response-container p{
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.result-reg{
+    margin:0;
+    padding: 0;
+    margin-bottom: 1rem;
+    list-style: square;
+}
+
+.btn-frm{
+    margin: 0;
+    min-width: 6rem;
+    background-color: #555e63 !important;
+    border-color: grey !important;
+}

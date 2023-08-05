@@ -1,0 +1,18 @@
+.spinner-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50rem;
+}
+
+.spinner-border{
+    min-width: 10rem;
+    min-height: 10rem;
+}
+
+@media (max-width: 768px) {
+    .spinner-border{
+        min-width: 6rem;
+        min-height: 6rem;
+    }
+}

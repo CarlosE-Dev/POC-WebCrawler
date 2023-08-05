@@ -1,0 +1,82 @@
+.offcanvas-title{
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.btn-canv{
+    margin-right: 2rem;
+}
+
+.btn-close{
+    background-color: #555e63 !important;
+}
+
+.offcanvas-body{
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.children-container{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .offcanvas{
+        width: 8rem !important;
+    }
+
+    .btn-close{
+        display: none;
+    }
+    
+    .offcanvas-title{
+        font-size: 1.2rem;
+    }
+
+    .btn-label{
+        font-size: 0.8rem;
+    }
+
+    .btn-exec{
+        width: 5.5rem;
+    }
+
+    .btn-canv{
+        margin-right: 3rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .offcanvas{
+        width: 15rem !important;
+    }
+
+    .btn-close{
+        display: none;
+    }
+    
+    .offcanvas-title{
+        font-size: 1.7rem;
+    }
+
+    .btn-canv{
+        margin-right: 3rem;
+    }   
+}
+
+  @media (min-width: 993px) and (max-width: 1200px) {
+    .offcanvas{
+        width: 21.5rem !important;
+    }
+    
+    .offcanvas-title{
+        font-size: 1.7rem;
+    }
+
+    .btn-canv{
+        margin-right: 3rem;
+    }   
+}
