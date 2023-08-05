@@ -110,6 +110,8 @@ Sabendo que o Crawler já foi executado, é possível realizar uma busca por CPF
         MaxWaitBeforeTimeoutGeneral: Tempo máximo para carregamento dos elementos ao utilizar o WebDriving(WaitHelpers)
     ```
 
+    Outras configurações presentes nesse arquivo de configuração devem ser preservadas em seus valores padrão, para o funcionamento completo da aplicação.
+
 <br/>
 
 ### Instalação ###
