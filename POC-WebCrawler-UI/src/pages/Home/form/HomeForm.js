@@ -87,7 +87,6 @@ const HomeForm = () => {
           {data !== null && data !== '' ? 
             <div className="response-container">
               <div>
-                  <p>Results:</p>
                   <ul className="result-reg">
                     {data.map((item, index) => (
                       <li key={index}>{item}</li>

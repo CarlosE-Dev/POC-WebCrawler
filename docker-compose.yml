@@ -1,0 +1,38 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./POC-WebCrawler-Main
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+      - redis
+  
+  frontend:
+    build:
+      context: ./POC-WebCrawler-UI
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"

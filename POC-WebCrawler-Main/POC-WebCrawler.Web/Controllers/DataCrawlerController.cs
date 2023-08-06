@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Nest;
 using POC_WebCrawler.Application.CQRS.Inputs;
 
 namespace POC_WebCrawler.Web.Controllers
@@ -15,7 +14,7 @@ namespace POC_WebCrawler.Web.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
+        [HttpGet("")]
         public async Task<IActionResult> Execute()
         {
             try
