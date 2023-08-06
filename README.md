@@ -1,6 +1,6 @@
 # Resumo #
 
-O sistema Web Crawler trata-se de uma Proof of Concept(POC) e representa uma solução desenvolvida para automatizar a busca e extração de dados do portal Extrato Clube (Website o qual foi proposto para a POC), utilizando tecnologias de ponta e uma abordagem abrangente, o Web Crawler capacita a coleta eficiente e precisa de informações relevantes a partir deste portal.
+O sistema Web Crawler trata-se de uma solução desenvolvida para automatizar a busca e extração de dados do portal Extrato Clube, esse projeto foi idealizado como uma Proof of Concept(POC) e tem o objetivo de capacitar a coleta eficiente e precisa de informações relevantes a partir deste portal.
 
 ### Back-end
 Estrutura construída em torno da plataforma .NET Core, que oferece uma base sólida para desenvolvimento e escalabilidade, com foco principalmente em performance e também em simplicidade (por se tratar de uma POC).
