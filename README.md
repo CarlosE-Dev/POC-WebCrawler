@@ -106,7 +106,7 @@ Sabendo que o Crawler já foi executado, é possível realizar uma busca por CPF
         Password: Sua senha para autenticação no Portal ExtratoClube
 
       CrawlerSettings:
-        MaxWaitBeforeTimeoutGeneral: Tempo máximo para carregamento dos elementos ao utilizar o WebDriving(WaitHelpers)
+        MaxWaitBeforeTimeoutGeneral: Tempo máximo para carregamento dos elementos no WebDriving(WaitHelpers)
     ```
 
     Esse arquivo possui outras configurações, credenciais e portas de serviços como RabbitMQ, ElasticSearch e Redis. Pode ser necessário realizar alteração dependendo da instalação do seu ambiente, mas é recomendado que seus valores sejam preservados para o funcionamento completo da aplicação.
