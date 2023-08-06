@@ -85,7 +85,7 @@ Sabendo que o Crawler já foi executado, é possível realizar uma busca por CPF
 ### Requisitos ###
 
 ```
-- Docker (Docker Compose)
+- Docker
 - Qualquer editor de texto
 ```
 
@@ -115,9 +115,15 @@ Sabendo que o Crawler já foi executado, é possível realizar uma busca por CPF
 
 ### Instalação ###
 
+Navegar até o diretório raiz do repositório e executar o comando docker
+
 ```
-Docker compose commands
+docker-compose up -d
 ```
+<br />
+Back-end disponível em http://localhost:8080 
+<br/>
+Front-end disponível em http://localhost:3000
 
 <br/>
 <br/>
